@@ -1,25 +1,36 @@
-""" class Hero:
-    def __init__(self, name, money, inventory):
+class Pet:
+    def __init__(self, name, happiness, money):
         self.name = name
-        self.money = money
-        self.inventory = inventory
+        self.happiness = happiness
+        self.__money = money
 
-    def buy(self, item):
-        self.inventory.append(item)
-        print(self.inventory)
-Jillian = Hero("Jillian", 150, ["Potion"])
-Jillian.buy({"title": "Sword", "atk": 34})
-print(Jillian.__dict__) """
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.__balance = balance  # double underscore means "private"
-
-    def deposit(self, amount):
-        self.__balance += amount
-
-    def show_balance(self):
-        print(f"{self.owner} has ${self.__balance}")
-Jillian = BankAccount("owner", 150)
-Jillian.deposit(50)
-Jillian.show_balance()
+    def play(self, activity):
+        self.happiness += 10
+        print(f"{self.name} is playing {activity}!")
+    
+    def show_status(self):
+        print(f"{self.name} happiness is now {self.happiness}")
+    
+    def spend(self, item, cost, amount):
+        if amount >= 1:
+            self.__money -= cost*amount 
+        if amount > 1: 
+            print(f"{self.name} has spent {cost*amount} on {amount} {item}s")
+        elif amount == 1:
+            print(f"{self.name} has spent {cost} on {amount} {item}")
+        else: 
+            print(f"{self.name} cannot buy that amount here.")
+    
+    def balance(self):
+        if self.__money == 0:
+            print(f"{self.name} is a broke homeless boy now")
+        elif self.__money < 0: 
+            print(f"{self.name} is in very big debt")
+        else: 
+            print(f"{self.name} has ${self.__money}")
+pboy = Pet("Pboy", 100, 20)
+pboy.balance()
+pboy.spend("racket", 20, -1)
+pboy.balance()  
+pboy.play("badminton")
+pboy.show_status()
