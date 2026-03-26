@@ -24,12 +24,6 @@ class Pet:
     def spend(self, item, cost, amount):
         if amount >= 1:
             self.__money -= cost*amount 
-        if amount > 1: 
-            print(f"{self.name} has spent {cost*amount} on {amount} {item}s")
-        elif amount == 1:
-            print(f"{self.name} has spent {cost} on {amount} {item}")
-        else: 
-            print(f"{self.name} cannot buy that amount here.")
     
     def balance(self):
         if self.__money == 0:
@@ -67,23 +61,23 @@ class Pet:
                 x = input("Start next day?")
     def work(self, job):
         self.__money += 25
-        print(f"{self.name} has made 25 bucks from {job}")
-        for i in range(21):
-            number = random.randint(1,1000)
+        for i in range(50000):
+            number = random.randint(1,20000)
             if number == 1:
-                print(f"{self.name} has earned a bonus and has gained triple the amount of money {self.name} was suppose to.")
-                self.__money += 50
-            else: 
-                print(f"{self.name} did not earn a bonus")
+                print("One r")
+                number1 = random.randint(1,100)
+                print(number1)
+                if number1 == 1 or number1 == 2 or number1 == 3:
+                    print("wow shiny")
+                    number2 = random.randint(1,200)
+                    print(number2)
+                    if number2 == 1 or number2 == 2 or number2 == 3 or number2 == 4 or number2 == 5 or number2 == 6 or number2 == 7 or number2 == 8 or number2 == 9 or number2 == 10 or number2 == 11 or number2 == 12 or number2 == 13 or number2 == 14 or number2 == 15 or number2 == 16 or number2 == 17 or number2 == 18 or number2 == 19 or number2 == 20 or number2 == 21 or number2 == 22 or number2 == 23 or number2 == 24 or number2 == 25:
+                        print(f"{self.name} has earned a bonus and has gained triple the amount of money {self.name} was suppose to.")
+                        print("wow you got it")
+                        self.__money += 50  
 
     
 pboy = Pet("Pboy", 100, 20, 50)
-pboy.balance()
 pboy.spend("racket", 20, 3)
-pboy.balance()  
-pboy.play("badminton")
-pboy.feed("atomic wings")
-pboy.show_status()
 pboy.work("games")
-pboy.show_status()
 pboy.balance()
