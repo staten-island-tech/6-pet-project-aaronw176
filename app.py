@@ -73,8 +73,8 @@ class Pet:
             if number == 1:
                 print(f"{self.name} has earned a bonus and has gained triple the amount of money {self.name} was suppose to.")
                 self.__money += 50
-            else: 
-                print(f"{self.name} did not earn a bonus")
+        if number != 1: 
+            print(f"{self.name} did not earn a bonus")
 
     
 pboy = Pet("Pboy", 100, 20, 50)

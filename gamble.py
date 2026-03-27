@@ -44,7 +44,7 @@ class Pet:
         print("The day has ended.")
         print(f"{self.name} has ended the day with {self.happiness} happiness, {self.hunger} hunger, {self.__money} money.")
         x = input("Start next day?")
-        for i in range(100000):
+        for i in range(1):
             if x == "yes":
                 self.hunger -= 20
                 self.__money += 10
@@ -60,24 +60,40 @@ class Pet:
                 print("That is an invalid option")
                 x = input("Start next day?")
     def work(self, job):
+        spins = 0
+        r = 0
+        shiny = 0
+        s = 0
         self.__money += 25
-        for i in range(50000):
+        for i in range(1000000000000000000000):
             number = random.randint(1,20000)
+            spins += 1
             if number == 1:
-                print("One r")
+                r+=1
                 number1 = random.randint(1,100)
-                print(number1)
-                if number1 == 1 or number1 == 2 or number1 == 3:
-                    print("wow shiny")
+                if number1 == 1 or number1 == 2 or number1 == 3 or number1 == 4 or number1 == 5 or number1 == 6:
+                    shiny += 1
                     number2 = random.randint(1,200)
-                    print(number2)
                     if number2 == 1 or number2 == 2 or number2 == 3 or number2 == 4 or number2 == 5 or number2 == 6 or number2 == 7 or number2 == 8 or number2 == 9 or number2 == 10 or number2 == 11 or number2 == 12 or number2 == 13 or number2 == 14 or number2 == 15 or number2 == 16 or number2 == 17 or number2 == 18 or number2 == 19 or number2 == 20 or number2 == 21 or number2 == 22 or number2 == 23 or number2 == 24 or number2 == 25:
                         print(f"{self.name} has earned a bonus and has gained triple the amount of money {self.name} was suppose to.")
-                        print("wow you got it")
-                        self.__money += 50  
+                        s += 1
+                        self.__money += 50 
+                        break
+        print(f"{spins} spins, {r} rukias {shiny} shinies, {s} sera")
 
     
 pboy = Pet("Pboy", 100, 20, 50)
 pboy.spend("racket", 20, 3)
 pboy.work("games")
 pboy.balance()
+""" NO SMTH SHINY
+7350000 + 546084 + 5813184 + 3060212 + 5192727 + 342152 + 1694415 + 1275877 + 2680826 + 404054 + 1237860 spins
+? + 150 + 286 + 272 + 17 + 108 + 86 + 125 + 24 + 80 rukia
+14 + 1 + 11 + 6 + 9 + 1 + 1 + 2 + 10 + 1 + 4 shinies
+0 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 seralized"""
+
+""" SMTH SHINY
+5176662 + 465503 + 3922665 + 214219 + 2203115 + 2585969 + 2187745 + 4330 + 2337970 + 2097858 + 643448 spins 
+257 + 19 + 197 + 12 + 111 + 135 + 91 + 1 + 102 + 108 + 36 rukia
+8 + 2 + 8 + 2 + 8 + 11 + 7 + 1 + 6 + 8 + 3 shinies
+1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 seralized """
