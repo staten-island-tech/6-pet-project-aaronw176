@@ -97,3 +97,8 @@ pboy.balance()
 257 + 19 + 197 + 12 + 111 + 135 + 91 + 1 + 102 + 108 + 36 rukia
 8 + 2 + 8 + 2 + 8 + 11 + 7 + 1 + 6 + 8 + 3 shinies
 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 seralized """
+""" unlucky spin:
+9939229 spins
+508 rukia
+33 shinies
+1 seralized """
