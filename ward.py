@@ -6,19 +6,11 @@ wards = {
 }
 
 staff = {}
-
-def find(dept):
-    for ward, value in wards.items():
-        for people in value:
-            if people in staff:
-                staff[ward] = {
-                    ward
-                }
-            else:
-                staff[people] = {
-                    'Ward' : ward
-                }
-    print(staff)
+staffward = []
+for ward, value in wards.items():
+    for people in value:
+        if people not in staff:
+            staff[people] = []
+        staff[people].append(ward)
+print(staff['Bob'])
         
-
-find("bob")
