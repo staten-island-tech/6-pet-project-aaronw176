@@ -30,4 +30,4 @@ def tree(heights):
     print(greaterf)
     print(lessf)
 
-tree([1,3,4,2,1,4,6,8,2,3,4,2,1,0])
+tree([1,3,4,2])

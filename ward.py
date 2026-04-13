@@ -12,5 +12,5 @@ for ward, value in wards.items():
         if people not in staff:
             staff[people] = []
         staff[people].append(ward)
-print(staff['Bob'])
+print(staff)
         
